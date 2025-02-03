@@ -7,7 +7,12 @@ class Shape:
     def getShape(self):
         print(f"the shape is {self.name}")
 
-class Circle(Shape):
+class Area:
+    def getArea(self):
+        pass
+
+
+class Circle(Shape,Area):
     def __init__(self,name,radius):
         super().__init__(name)
         self.radius=radius
@@ -15,7 +20,7 @@ class Circle(Shape):
     def getArea(self):
         return math.pi*self.radius**2
 
-class Square(Shape):
+class Square(Shape,Area):
     def __init__(self,name,side):
         super().__init__(name)
         self.side=side
